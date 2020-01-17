@@ -1,0 +1,255 @@
+<!-- Start: Slider Section -->
+<div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
+
+    <!-- Carousel slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <figure>
+                <img alt="Home Slide" src="images/slide3.jpg" />
+            </figure>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h3>Selamat Datang</h3>
+                    <h2>Di Perpustakaan Digital</h2>
+                    <p>Perpustakaan PCR dengan banyak koleksi didalamnya yang sangat membantu dalam aktivitas pada kemahasiswaan</p>
+                    <div class="slide-buttons hidden-sm hidden-xs">
+                        <a href="https://pcr.ac.id/fasilitas/2633/perpustakaan" class="btn btn-primary">Baca Lebih lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img alt="Home Slide" src="images/slide2.jpg" />
+            </figure>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h3>Belajar dimanapun dan kapanpun</h3>
+                    <h2>Dari Jurnal pilihan</h2>
+                    <p>Menyediakan berbagai Link Menuju Jurnal pilihan</p>
+                    <div class="slide-buttons hidden-sm hidden-xs">
+                        <a href="/jurnal" class="btn btn-primary">Baca Lebih lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img alt="Home Slide" src="images/header-slider/home-v1/header-slide.jpg" />
+            </figure>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h3>Memberikan berita terbaru</h3>
+                    <h2>Dapat diakses kapanpun</h2>
+                    <p>Perpustakaan digital juga menyediakan berbagai berita tentang teknologi di Indonesia</p>
+                    <div class="slide-buttons hidden-sm hidden-xs">
+                        <a href="/news" class="btn btn-primary">Baca Lebih lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
+    <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
+</div>
+<!-- End: Slider Section -->
+
+<!-- Start: Search Section -->
+<section class="search-filters">
+    <div class="container">
+        <div class="filter-box">
+            <h3>Pencarian koleksi</h3>
+            <form action="/search_koleksi" method="post">
+                <div class="col-md-5 col-sm-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="keywords">Cari Berdasarkan kata</label>
+                        <input class="form-control" placeholder="Kata Kunci" id="keywords" name="keywords" type="text">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                        <select name="category" id="category" class="form-control">
+                            <option>Kategori</option>
+                            {{#each kategori}}
+                            <option>{{this.kategori_koleksi}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="submit" value="Search">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End: Search Section -->
+
+<!-- Start: Welcome Section -->
+<section class="welcome-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="welcome-wrap">
+                    <div class="welcome-text">
+                        <h2 class="section-title">Selamat Datang di Politeknik Caltex Riau</h2>
+                        <span class="underline left"></span>
+                        <p>Perpustakaan PCR dilengkapi dengan koleksi buku-buku, bahan kuliah, dan jurnal-jurnal yang dapat menambah wawasan mahasiswa. Keberadaan perpustakaan ini yakni untuk memberikan layanan informasi untuk kegiatan belajar, penelitian, dan pengabdian masyarakat dalam rangka melaksanakan Tri Dharma Perguruan Tinggi.  Saat ini koleksi Buku Teks yang ada di Perpusatakaan PCR berjumlah hampir 3000-an Judul buku dengan Jumlah Eksamplarnya sebanyak lebih kurang 6000-an Eksamplar. Perpustakaan juga menyediakan Modul-Modul pengajaran bagi Mahasiswa dan Dosen hampir sebanyak 400-an Judul dengan 30.000-an Eksamplar. Selain dari Buku Teks dan Modul Pengajaran Perpustakaan PCR juga menyediakan Jurnal-Jurnal baik Nasional dan Internasional, Proceeding, CD Pengajaran, Kumpulan Referensi Tugas Akhir Mahasiswa, dan Juga Novel-Novel Fiksi serta buku-buku dengan kategori umum untuk konsumsi Mahasiswa dan Dosen.</p>
+                        <a class="btn btn-primary" href="/book">Baca Lebih lanjut</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="facts-counter">
+                    <ul>
+                        <li class="bg-light-green">
+                            <div class="fact-item">
+                                <div class="fact-icon">
+                                    <i class="ebook"></i>
+                                </div>
+                                <span>Buku<strong class="fact-counter">6000</strong></span>
+                            </div>
+                        </li>
+                        <li class="bg-green">
+                            <div class="fact-item">
+                                <div class="fact-icon">
+                                    <i class="eaudio"></i>
+                                </div>
+                                <span>Audio Elektronik<strong class="fact-counter">6000</strong></span>
+                            </div>
+                        </li>
+                        <li class="bg-red">
+                            <div class="fact-item">
+                                <div class="fact-icon">
+                                    <i class="magazine"></i>
+                                </div>
+                                <span>Majalah<strong class="fact-counter">6000</strong></span>
+                            </div>
+                        </li>
+                        <li class="bg-blue">
+                            <div class="fact-item">
+                                <div class="fact-icon">
+                                    <i class="videos"></i>
+                                </div>
+                                <span>Vidio<strong class="fact-counter">6000</strong></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="welcome-image"></div>
+</section>
+<!-- End: Welcome Section -->
+
+<!-- Start: Category Filter -->
+<section class="category-filter section-padding">
+    <div class="container">
+        <div class="center-content">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 class="section-title">Keluaran Terbaru</h2>
+                    <span class="underline center"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="category-filter">
+        <ul class="category-list">
+            {{#each results}}
+            <li class="category-item books">
+                <figure>
+                    <img src="{{this.cover_koleksi}}" alt="New Releaase" />
+                    <figcaption class="bg-orange">
+                        <div class="info-block">
+                            <h4>{{this.nama_koleksi}}</h4>
+                            <span class="author"><strong>Author:</strong> {{this.penulis_koleksi}}</span>
+                            <span class="author"><strong>ISBN:</strong>{{this.ISBN_koleksi}}</span>
+                            <p></p>
+                            <a href="/book_detail/{{this.id_koleksi}}">Baca Lebih Lanjut <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </figcaption>
+                </figure>
+            </li>
+            {{/each}}
+        </ul>
+        <div class="center-content">
+            <a href="#" class="btn btn-primary">Lihat lebih banyak</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</section>
+<!-- Start: Category Filter -->
+
+<!-- Start: Features -->
+<section class="features">
+    <div class="container">
+        <ul>
+            <li class="bg-yellow">
+                <div class="feature-box">
+                    <i class="yellow"></i>
+                    <h3>Books</h3>
+                    <p>Perpustakaan PCR dilengkapi dengan lebih dari 3000 koleksi buku yang terdiri dariu berbagai jenis bacaan</p>
+                    <a class="yellow" href="#">
+                    </a>
+                </div>
+            </li>
+            <li class="bg-light-green">
+                <div class="feature-box">
+                    <i class="light-green"></i>
+                    <h3>eBooks</h3>
+                    <p>Anda Dapat membaca buku secara online</p>
+                    <a class="light-green" href="/book">
+                        View Selection <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="bg-blue">
+                <div class="feature-box">
+                    <i class="blue"></i>
+                    <h3>File PA</h3>
+                    <p>Berbagai judul dari pengerjaan PA para alumni yang telah lulus dapat di download</p>
+                    <a class="blue" href="/PA">
+                        View Selection <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="bg-red">
+                <div class="feature-box">
+                    <i class="red"></i>
+                    <h3>Berita</h3>
+                    <p>Membaca Berita tentang perkembangan teknologi terbaru</p>
+                    <a class="red" href="/news">
+                        View Selection <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="bg-violet">
+                <div class="feature-box">
+                    <i class="violet"></i>
+                    <h3>Audio</h3>
+                    <p>Mendengarkan file audio sebagai bahan pembelajaran</p>
+                    <a class="violet" href="#">
+                        View Selection <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="bg-green">
+                <div class="feature-box">
+                    <i class="green"></i>
+                    <h3>eAudio</h3>
+                    <p>memainkan audio / video dari internet</p>
+                    <a class="green" href="#">
+                        View Selection <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- End: Features -->

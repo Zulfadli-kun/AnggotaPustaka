@@ -1,0 +1,84 @@
+<!-- Start: Page Banner -->
+<section class="page-banner news-listing-banner services-banner">
+    <div class="container">
+        <div class="banner-header">
+            <h2>Daftar Berita</h2>
+            <span class="underline center"></span>
+            <p class="lead"></p>
+        </div>
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="/">Beranda</a></li>
+                <li>Berita</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End: Page Banner -->
+
+<!-- Start: Products Section -->
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="main-news-list">
+                <div class="container">
+                    <!-- Start: Search Section -->
+                    <section class="search-filters">
+                        <div class="filter-box">
+                            <h3>News</h3>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    <!-- End: Search Section -->
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3 news-events-list-view">
+                            {{# each items}}
+                            <div class="news-list-box">
+                                <div class="single-news-list">
+                                    <figure>
+                                        <a href="{{this.url}}"><img src="{{this.urlToImage}}" alt="News &amp; Event" width="385 px" height="448 px"></a>
+                                    </figure>
+                                    <div class="content-block">
+                                        <div class="member-info">
+                                            <h3><a href="{{this.url}}">{{this.title}}</a></h3>
+                                            <h5>Published at {{this.publishedAt}}</h5>
+                                            <p>{{this.content}}</p>
+                                            <a class="btn btn-primary" href="{{this.url}}">Baca Lebih</a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            {{/each}}
+                            <nav class="navigation pagination text-center">
+                                <h2 class="screen-reader-text">Posts navigation</h2>
+                                <div class="nav-links">
+                                    <a class="prev page-numbers" href="#."><i class="fa fa-long-arrow-left"></i> Previous</a>
+                                    <a class="page-numbers" href="#.">1</a>
+                                    <span class="page-numbers current">2</span>
+                                    <a class="page-numbers" href="#.">3</a>
+                                    <a class="page-numbers" href="#.">4</a>
+                                    <a class="next page-numbers" href="#.">Next <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-md-3 col-md-pull-9">
+                            <aside id="secondary" class="sidebar widget-area">
+                                <div class="widget widget_related_search">
+                                    <h4 class="widget-title" data-control>berita lainnya</h4>
+                                    <div class="widget_categories">
+                                        <ul>
+                                            <li><a href="/news">Berita Teknologi<span></span></a></li>
+                                            <li><a href="/berita">Berita PCR<span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- End: Products Section -->

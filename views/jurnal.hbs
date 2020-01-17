@@ -1,0 +1,99 @@
+<!-- Start: Page Banner -->
+<section class="page-banner services-banner">
+    <div class="container">
+        <div class="banner-header">
+            <h2>Modul</h2>
+            <span class="underline center"></span>
+        </div>
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="/">Beranda</a></li>
+                <li>Buku & Media</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End: Page Banner -->
+
+<!-- Start: Book & Media Section -->
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="books-media-list">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start: Search Section -->
+                        <section class="search-filters">
+                            <div class="container">
+                                <div class="filter-box">
+                                    <h3>Pencarian</h3>
+                                    <form action="/jurnal_search" method="post">
+                                        <div class="col-md-10 col-sm-10 center-block">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="keywords">Berdasarkan Kata Kunci</label>
+                                                <input class="form-control" placeholder="Search by Keyword" id="keywords" name="keywords" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-6">
+                                            <div class="form-group">
+                                                <input class="form-control" type="submit" value="Search">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End: Search Section -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3">
+                            <div class="books-list">
+                                {{#each data}}
+                                <article>
+                                    <div class="single-book-box">
+                                        <div class="post-thumbnail">
+                                            <div class="book-list-icon yellow-icon"></div>
+                                            <a href="books-media-detail-v1.html"><img alt="Book" src="images/books-media/list-view/default-image.jpg" /></a>                                                                 </div>
+                                        <div class="post-detail">
+                                            <header class="entry-header">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3 class="entry-title">
+                                                            <a href="#">{{this.title}}</a>
+                                                        </h3>
+                                                        <ul>
+                                                            <li>{{{this.description}}}...</li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="entry-content">
+                                            </div>
+                                            <footer class="entry-footer">
+                                                <a class="btn btn-dark-gray" href={{this.url}}>Baca Lebih</a>
+                                            </footer>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </article>
+                                {{/each}}
+                            </div>
+                            <nav class="navigation pagination text-center">
+                                <h2 class="screen-reader-text">Posts navigation</h2>
+                                <div class="nav-links">
+                                    <a class="prev page-numbers" href="#."><i class="fa fa-long-arrow-left"></i> Previous</a>
+                                    <a class="page-numbers current" href="#.">1</a>
+                                    <!--<span class="page-numbers">2</span>
+                                    <a class="page-numbers" href="#.">3</a>
+                                    <a class="page-numbers" href="#.">4</a>-->
+                                    <a class="next page-numbers" href="#.">Next <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

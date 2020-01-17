@@ -1,0 +1,176 @@
+<section class="page-banner services-banner">
+    <div class="container">
+        <div class="banner-header">
+            <h2>Buku & Media</h2>
+            <span class="underline center"></span>
+            <p class="lead"></p>
+        </div>
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="/">Beranda</a></li>
+                <li>Buku & Media</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End: Page Banner -->
+
+<!-- Start: Products Section -->
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="booksmedia-detail-main">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                    <div class="booksmedia-detail-box">
+                        {{#each results}}
+                        <div class="detailed-box">
+                            <div class="col-xs-12 col-sm-5 col-md-3">
+                                <div class="post-thumbnail">
+                                    <div class="book-list-icon yellow-icon"></div>
+                                    <img src={{this.cover_koleksi}}>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-6">
+
+                                <div class="post-center-content">
+                                    <h2>{{this.nama_koleksi}}</h2>
+                                    <p><strong>Pengarang:</strong> {{this.penulis_koleksi}}</p>
+                                    <p><strong>ISBN:</strong> {{this.ISBN_koleksi}}</p>
+                                    <p><strong>Edisi:</strong> {{this.edisi_koleksi}}</p>
+                                    <p><strong>Penerbit:</strong> {{this.penerbit_koleksi}}</p>
+                                    <p><strong>Halaman:</strong> {{this.jlhhal_koleksi}}</p>
+                                    <p><strong>Format:</strong> e-book</p>
+                                    <p><strong>Bahasa:</strong> {{this.bahasa_koleksi}} </p>
+                                    <p><strong>Kategori:</strong> {{this.subjek_koleksi}}</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                            <center>{{{this.data_koleksi}}}</center>
+                        {{/each}}
+                        <!--<div class="table-tabs" id="responsiveTabs">-->
+                            <!--<div class="tab-content">-->
+                                <!--<div id="sectionB" class="tab-pane fade in">-->
+                                    <!--<h5>Lorem Ipsum Dolor</h5>-->
+                                    <!--<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>-->
+                                <!--</div>-->
+                                <!--<div id="sectionC" class="tab-pane fade in">-->
+                                    <!--<h5>Lorem Ipsum Dolor</h5>-->
+                                    <!--<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>-->
+                                <!--</div>-->
+                                <!--<div id="sectionD" class="tab-pane fade in">-->
+                                    <!--<h5>Lorem Ipsum Dolor</h5>-->
+                                    <!--<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>-->
+                                <!--</div>-->
+                                <!--<div id="sectionE" class="tab-pane fade in">-->
+                                    <!--<h5>Lorem Ipsum Dolor</h5>-->
+                                    <!--<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>-->
+                                <!--</div>-->
+                                <!--<div id="sectionF" class="tab-pane fade in">-->
+                                    <!--<h5>Lorem Ipsum Dolor</h5>-->
+                                    <!--<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- End: Products Section -->
+<div class="booksmedia-fullwidth">
+    <div class="container">
+        <h2 class="section-title text-center">Popular Items</h2>
+        <span class="underline center"></span>
+        <p class="lead text-center"></p>
+        <ul class="popular-items-detail-v2">
+            <li>
+                <div class="book-list-icon yellow-icon"></div>
+                <figure>
+                    <img src="/images/bahasa-001.jpg" alt="Book">
+                    <figcaption>
+                        <header>
+                            <h4><a href="/book_detail/5">Bahasa dan Sastra 3</a></h4>
+                            <p><strong>Author:</strong> Demas Marsudi, Endang Padmini, dan Suwarni </p>
+                            <p><strong>ISBN:</strong> 978-979-068-899-5 </p>
+                        </header>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <div class="book-list-icon yellow-icon"></div>
+                <figure>
+                    <img src="/images/filsafat-001.jpg" alt="Book">
+                    <figcaption>
+                        <header>
+                            <h4><a href="/book_detail/7">Dasar Pemeranan</a></h4>
+                            <p><strong>Author:</strong>Heru Subagiyo</p>
+                            <p><strong>ISBN:</strong>978-979-068-684-7</p>
+                        </header>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <div class="book-list-icon yellow-icon"></div>
+                <figure>
+                    <img src="/images/Mat-001.jpg" alt="Book">
+                    <figcaption>
+                        <header>
+                            <h4><a href="/book_detail/9">Khazanah Matematika 2</a></h4>
+                            <p><strong>Author:</strong>Rosihan Ari Y., Indriyastuti</p>
+                            <p><strong>ISBN:</strong>978-979-068-861-2</p>
+                        </header>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <div class="book-list-icon yellow-icon"></div>
+                <figure>
+                    <img src="/images/sosial-001.jpg" alt="Book">
+                    <figcaption>
+                        <header>
+                            <h4><a href="/book_detail/13">Jelajah Cakrawala Sosial</a></h4>
+                            <p><strong>Author:</strong>Nurhadi, Bud A. Saleh, Diding A. Badri, dan Paula Susanti</p>
+                            <p><strong>ISBN:</strong> 978-979-068-684-7</p>
+                        </header>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <div class="book-list-icon yellow-icon"></div>
+                <figure>
+                    <img src="/images/sastra-001.jpg" alt="Book">
+                    <figcaption>
+                        <header>
+                            <h4><a href="/book_detail/10">Cerdas Berbahasa dan Sastra</a></h4>
+                            <p><strong>Author:</strong> Yulianeta dan Tedi Permadi2</p>
+                            <p><strong>ISBN:</strong> 979-979-068-663-</p>
+                        </header>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <div class="book-list-icon yellow-icon"></div>
+                <figure>
+                    <img src="/images/sejarah-001.jpg" alt="Book">
+                    <figcaption>
+                        <header>
+                            <h4><a href="/detail_book/11">Jelajah Cakrawala Sosial</a></h4>
+                            <p><strong>Author:</strong> Wardaya</p>
+                            <p><strong>ISBN:</strong> 978-979-068-673-1</p>
+                        </header>
+                        <p></p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</div>

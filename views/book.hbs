@@ -1,0 +1,153 @@
+<!-- Start: Page Banner -->
+<section class="page-banner services-banner">
+    <div class="container">
+        <div class="banner-header">
+            <h2>Books & Media Listing</h2>
+            <span class="underline center"></span>
+            <p class="lead"></p>
+        </div>
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>Books & Media</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End: Page Banner -->
+
+<!-- Start: Products Section -->
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="books-media-gird">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start: Search Section -->
+                        <section class="search-filters">
+                            <div class="container">
+                                <div class="filter-box">
+                                    <h3>Pencarian koleksi</h3>
+                                    <form action="/search_koleksi" method="post">
+                                        <div class="col-md-5 col-sm-6">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="keywords">Cari Berdasarkan kata</label>
+                                                <input class="form-control" placeholder="Search by Keyword" id="keywords" name="keywords" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <select name="category" id="category" class="form-control">
+                                                    <option>All Categories</option>
+                                                    {{#each kategori}}
+                                                        <option>{{this.kategori_koleksi}}</option>
+                                                    {{/each}}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-6">
+                                            <div class="form-group">
+                                                <input class="form-control" type="submit" value="Search">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End: Search Section -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3">
+                            <div class="filter-options margin-list">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="filter-result"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="books-gird">
+                                <ul>
+                                    {{#each results}}
+                                    <li>
+                                        <figure>
+                                            <img src="{{this.cover_koleksi}}" alt="Book">
+                                            <figcaption>
+                                                <p><strong>{{this.nama_koleksi}}</strong></p>
+                                                <p><strong>Author:</strong>{{this.penulis_koleksi}}</p>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="book-list-icon yellow-icon"></div>
+                                        <div class="single-book-box">
+                                            <div class="post-detail">
+                                                <header class="entry-header">
+                                                    <h3 class="entry-title"><a href="books-media-detail-v1.html">{{this.nama_koleksi}}</a></h3>
+                                                    <ul>
+                                                        <li><strong>Author:</strong>{{this.penulis_koleksi}}</li>
+                                                        <li><strong>ISBN:</strong>{{this.ISBN_koleksi}}</li>
+                                                    </ul>
+                                                </header>
+                                                <div class="entry-content">
+                                                    <p>(disini akan menampilkan sinopsi buku)</p>
+                                                </div>
+                                                <footer class="entry-footer">
+                                                    <a class="btn btn-primary" href="/book_detail/{{this.id_koleksi}}">Read More</a>
+                                                </footer>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <nav class="navigation pagination text-center">
+                                <h2 class="screen-reader-text">Posts navigation</h2>
+                                <div class="nav-links">
+                                    <a class="prev page-numbers" href="#."><i class="fa fa-long-arrow-left"></i> Previous</a>
+                                    <a class="page-numbers current" href="#.">1</a>
+                                    <span class="page-numbers" href="#.">2</span>
+                                    <a class="page-numbers" href="#.">3</a>
+                                    <a class="page-numbers" href="#.">4</a>
+                                    <a class="next page-numbers" href="#.">Next <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-md-3 col-md-pull-9">
+                            <aside id="secondary" class="sidebar widget-area" data-accordion-group>
+                                <div class="widget widget_related_search open" data-accordion>
+                                    <h4 class="widget-title" data-control>Related Searches</h4>
+                                    <div data-content>
+                                        <div data-accordion>
+                                            <h5 class="widget-sub-title" data-control>kategori</h5>
+                                            <div class="widget_categories" data-content>
+                                                <ul>
+                                                    {{#each kategori}}
+                                                    <li><a href="/book/{{this.kategori_koleksi}}">{{this.kategori_koleksi}}<span>({{this.jumlah}})</span></a></li>
+                                                    {{/each}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div data-accordion>
+                                            <h5 class="widget-sub-title" data-control>Penulis</h5>
+                                            <div class="widget_categories" data-content>
+                                                <ul>
+                                                    {{#each penulis}}
+                                                    <li><a href="/author/{{this.penulis_koleksi}}">{{this.penulis_koleksi}} <span>{{this.penulis}}</span></a></li>
+                                                    {{/each}}
+
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
