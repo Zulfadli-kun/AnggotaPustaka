@@ -15,7 +15,6 @@ var con = mysql.createConnection({
 router.get('/', function(req, res, next) {
     con.query("SELECT * FROM koleksionline", function (err, results, field) {
         con.query("SELECT kategori_koleksi FROM `koleksionline`GROUP BY kategori_koleksi", function (elol, kategori) {
-
             if (err) {
                 throw err
             } else {
@@ -25,7 +24,8 @@ router.get('/', function(req, res, next) {
                 else {
                     res.render('index', {
                         title: 'Express',
-                        results: results,kategori
+                        results: results,kategori,
+                        usernamo: req.session.user && req.session.user.nama_anggota,
                     })
                 }
             }
@@ -162,8 +162,8 @@ router.get('/signing',function (req,res,next) {
 router.post('/action_login',function (req,res,next) {
     var username = req.body.username
     var password = req.body.password
-    console.log(username,password)
-    con.query("SELECT * FROM anggotapustaka WHERE email_anggota ='"+username+"' AND pass_anggota ='"+password+"'",function (err, results, field){
+    con.query("SELECT * FROM anggotapustaka WHERE email_anggota ='"+username+"' AND pass_anggota =PASSWORD('"+password+"')",function (err, results, field){
+        console.log({ results, err })
         if (err) {
             throw err
         }
@@ -171,6 +171,8 @@ router.post('/action_login',function (req,res,next) {
             res.redirect('/signing')
         }
         else {
+            results[0].pass_anggota = undefined;
+            req.session.user = Object.assign({}, results[0]);
             res.redirect('/')
         }
     })
@@ -265,5 +267,10 @@ router.post('/jurnal_search',function (req,res,next) {
         console.log(search);
         res.render('jurnal',{data: search})
     });
+});
+
+router.get('/logout', function (req, res) {
+    req.session.user = undefined;
+    res.redirect('/');
 });
 module.exports = router;
